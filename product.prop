@@ -22,6 +22,9 @@ persist.sys.fuse.passthrough.enable=true
 # Incremental FS
 ro.incremental.enable=1
 
+# IORap app launch prefetching using Perfetto traces and madvise
+ro.iorapd.enable=true
+
 # LMKD
 ro.config.low_ram=false
 ro.lmk.low=1001
