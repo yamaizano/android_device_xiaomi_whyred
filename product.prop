@@ -9,6 +9,9 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.profile_update=true
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Incremental FS
 ro.incremental.enable=1
 
