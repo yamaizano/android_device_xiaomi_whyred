@@ -377,6 +377,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
 
+# Preopt packages
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
