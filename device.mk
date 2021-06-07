@@ -448,8 +448,10 @@ PRODUCT_PACKAGES += \
 # Telephony
 PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
+    qti-telephony-hidl-wrapper-prd.xml \
     qti_telephony_utils.xml \
     qti-telephony-hidl-wrapper \
+    qti-telephony-hidl-wrapper-prd \
     qti-telephony-utils \
     telephony-ext
 
