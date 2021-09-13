@@ -8,6 +8,7 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.whyred",
     init_rc: ["android.hardware.light@2.0-service.whyred.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.whyred.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",
