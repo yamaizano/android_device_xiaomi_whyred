@@ -147,6 +147,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     BluetoothQti \
     libbthost_if \
+    android.hardware.bluetooth@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
@@ -205,7 +206,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.frameworks.displayservice@1.0 \
-    vendor.display.config@1.1
+    vendor.display.config@1.9.vendor \
+    vendor.display.config@2.0.vendor
 
 # Display Device Config
 PRODUCT_COPY_FILES += \
@@ -358,6 +360,10 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
     netutils-wrapper-1.0
 
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.1.vendor
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -427,7 +433,8 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
+    android.frameworks.sensorservice@1.0.vendor
 
 # Shims
 PRODUCT_PACKAGES += \
