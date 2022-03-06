@@ -329,7 +329,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.whyred
+    android.hardware.light-service.whyred
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
