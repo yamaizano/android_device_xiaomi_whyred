@@ -17,6 +17,9 @@ PRODUCT_COMPRESSED_APEX := false
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
