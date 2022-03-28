@@ -35,7 +35,6 @@ on init
     # start qseecomd early as we mount system/ vendor/ early
     # vold needs keymaster that needs qseecomd
     start vendor.qseecomd
-    wait_for_prop vendor.sys.listeners.registered true 
 
 on fs
     mount_all /vendor/etc/fstab.qcom --early
@@ -67,6 +66,14 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
+    # Wait qseecomd started
+    wait_for_prop vendor.sys.listeners.registered true
+
+on property:vendor.sys.listeners.registered=true
+    # load IPA FWs
+    write /dev/ipa 1
+
+on post-fs
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
 
@@ -84,7 +91,6 @@ on post-fs-data
     rm /data/vendor/fpc/user.db
 
 on early-boot
-    write /dev/ipa 1
     chown system system /mnt/vendor/persist/sensors
     chown system system /mnt/vendor/persist/sensors/sns.reg
     chown system system /mnt/vendor/persist/sensors/sensors_settings
