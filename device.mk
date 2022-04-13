@@ -138,12 +138,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.whyred
 
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti \
@@ -279,6 +273,10 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
+
+# IFAAService
+PRODUCT_PACKAGES += \
+    IFAAService
 
 # IDC
 PRODUCT_COPY_FILES += \
