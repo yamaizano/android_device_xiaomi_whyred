@@ -15,9 +15,6 @@ persist.sys.fuse.passthrough.enable=true
 # Incremental FS
 ro.incremental.enable=1
 
-# IORap
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-
 # LMKD
 ro.config.low_ram=false
 ro.lmk.low=1001
