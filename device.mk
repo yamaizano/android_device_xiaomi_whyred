@@ -354,6 +354,10 @@ PRODUCT_PACKAGES += \
     libregistermsext \
     mediametrics
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor
+
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
