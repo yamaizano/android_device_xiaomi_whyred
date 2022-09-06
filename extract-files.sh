@@ -54,6 +54,14 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+	vendor/lib/hw/camera.sdm660.so)
+            for LIBCAMERA_SDM660_SHIM in $(grep -L "libcamera_sdm660_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libcamera_sdm660_shim.so" "$LIBCAMERA_SDM660_SHIM"
+            done
+            ;;
+        vendor/lib/libMiWatermark.so)
+            grep -q "libpiex_shim.so" "${2}" || ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
+            ;;
     esac
 }
 

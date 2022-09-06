@@ -149,6 +149,10 @@ PRODUCT_PACKAGES += \
     libdng_sdk.vendor \
     vendor.qti.hardware.camera.device@1.0:64
 
+PRODUCT_PACKAGES += \
+    libcamera_shim \
+    libpiex_shim
+
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
@@ -421,10 +425,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
     android.hardware.sensors@1.0-service \
     android.frameworks.sensorservice@1.0.vendor
-
-# Shims
-PRODUCT_PACKAGES += \
-    libcamera_shim
 
 # Tethering
 PRODUCT_PACKAGES += \
