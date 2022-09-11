@@ -14,6 +14,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 PRODUCT_COMPRESSED_APEX := false
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
@@ -214,6 +217,10 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Framework detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
@@ -278,7 +285,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    fstab.qcom
+    fstab.qcom \
+    fstab.qcom_ramdisk
 
 # IPACM
 PRODUCT_PACKAGES += \
