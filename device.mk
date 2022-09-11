@@ -29,7 +29,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+    $(DEVICE_PATH) \
+    hardware/xiaomi
 QCOM_SOONG_NAMESPACE := \
     hardware/qcom-caf/sdm660
 
