@@ -63,13 +63,13 @@ function blob_fixup() {
             grep -q "libpiex_shim.so" "${2}" || ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/lib64/com.fingerprints.extension@1.0.so)
-            grep -q "libhidlbase.so" "${2}" || ${PATCHELF} --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            grep -q "libhidlbase.so" "${2}" || sed -i "s/libhidltransport.so/libhidlbase_shim.so/" "${2}"
             ;;
         vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so)
-            grep -q "libhidlbase.so" "${2}" || ${PATCHELF} --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            grep -q "libhidlbase.so" "${2}" || sed -i "s/libhidltransport.so/libhidlbase_shim.so/" "${2}"
             ;;
         vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
-            grep -q "libhidlbase.so" "${2}" || ${PATCHELF} --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            grep -q "libhidlbase.so" "${2}" || sed -i "s/libhidltransport.so/libhidlbase_shim.so/" "${2}"
             ;;
         system_ext/lib64/lib-imsvideocodec.so)
             grep -q "libgui_shim.so" "${2}" || ${PATCHELF} --add-needed "libgui_shim.so" "${2}"
