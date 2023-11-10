@@ -412,7 +412,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     libavservices_minijail.vendor \
     libjson \
-    libprotobuf-cpp-full \
     librmnetctl
 
 # Seccomp policy
