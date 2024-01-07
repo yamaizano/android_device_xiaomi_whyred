@@ -1,1 +1,2 @@
 dontaudit init { bt_firmware_file }:filesystem getattr;
+allow init logdump_partition:lnk_file relabelto;
