@@ -413,6 +413,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     libavservices_minijail.vendor \
+    libgui_shim \
     libjson \
     librmnetctl \
     libsqlite.vendor \
