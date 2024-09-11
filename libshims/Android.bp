@@ -7,3 +7,9 @@ cc_library_shared {
     ],
     vendor: true,
 }
+
+cc_library {
+    name: "libcrypto_shim",
+    srcs: ["libcrypto_shim.c"],
+    vendor: true
+}
