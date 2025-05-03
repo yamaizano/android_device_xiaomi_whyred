@@ -30,6 +30,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
+QCOM_SOONG_NAMESPACE := \
+    hardware/qcom-caf/sdm660
 
 # Permissions
 PRODUCT_COPY_FILES += \
