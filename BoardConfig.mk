@@ -127,10 +127,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
 TARGET_KERNEL_CONFIG := vendor/whyred_defconfig
 TARGET_KERNEL_VERSION := 4.19
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/charging_enabled
-
 # Media
 USE_DEVICE_SPECIFIC_MEDIA := true
 DEVICE_SPECIFIC_MEDIA_PATH := hardware/qcom-caf/sdm660/media
