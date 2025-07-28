@@ -348,4 +348,7 @@
     <dimen name="rounded_corner_radius">39px</dimen>
     <dimen name="rounded_corner_radius_top">38px</dimen>
     <dimen name="rounded_corner_radius_bottom">39px</dimen>
+
+    <!-- PowerOffAlarmService -->
+    <bool name="config_powerOffAlarmEnabled">true</bool>
 </resources>
