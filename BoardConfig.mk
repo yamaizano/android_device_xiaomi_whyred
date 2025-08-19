@@ -107,9 +107,11 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
+    androidboot.boot_devices=soc/c0c4000.sdhci \
     androidboot.configfs=true \
     androidboot.hardware=qcom \
     androidboot.usbcontroller=a800000.dwc3 \
+    androidboot.super_partition=system \
     ehci-hcd.park=3 \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
