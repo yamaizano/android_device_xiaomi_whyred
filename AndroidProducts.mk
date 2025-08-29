@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_whyred.mk
+    $(LOCAL_DIR)/lmodroid_whyred.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_whyred-user \
-    lineage_whyred-userdebug \
-    lineage_whyred-eng
+    lmodroid_whyred-user \
+    lmodroid_whyred-userdebug \
+    lmodroid_whyred-eng
